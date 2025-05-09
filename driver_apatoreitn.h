@@ -85,7 +85,7 @@ private:
 
     // experimental Apator E-ITN 40
     if ((telegram.size() > 52)) {
-      ret_val = (((uint32_t)telegram[10] << 8) + (uint32_t)telegram[09]);
+      ret_val = (((uint32_t)telegram[10] << 8) + (uint32_t)telegram[9]);
     }
     ESP_LOGVV(TAG, "Found previous_m_hca with '%f'", ret_val.value());
 
