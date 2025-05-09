@@ -84,8 +84,8 @@ private:
     esphome::optional<double> ret_val{};
 
     // experimental Apator E-ITN 40
-    if ((telegram[8] == 0x09) && (telegram.size() > 52)) {
-      ret_val = (((uint32_t)telegram[22] << 8) + (uint32_t)telegram[21]);
+    if ((telegram.size() > 52)) {
+      ret_val = (((uint32_t)telegram[10] << 8) + (uint32_t)telegram[09]);
     }
     ESP_LOGVV(TAG, "Found previous_m_hca with '%f'", ret_val.value());
 
